@@ -2,20 +2,20 @@
 #include <math.h>
 
 int ehTriangulo(float x, float y, float z) {
-    if((x < y + z) || (y < x + z) || (z < y + x)) {
+    if((x < y + z) && (y < x + z) && (z < y + x)) {
         return 1;
     }
     return 0;
 }
 
 int defineTriangulo(float x, float y, float z) {
-    if(x == y == z) {
+    if(x == y && y == z) {
         return 3;
     }
     else if(x == y || x == z || y == z) {
         return 2;
     }
-    else if(x != y != z) {
+    else if(x != y && y != z && x != z) {
         return 1;
     }
     else {
