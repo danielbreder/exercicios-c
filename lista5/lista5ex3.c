@@ -1,18 +1,24 @@
-int ehPrimo(float n) {
-    int primo = 0;
-    while(n%2!=0){
+#include <stdio.h>
+#include <stdlib.h>
 
+int ehPrimo(int n) {
+    int primo = 0;
+    if(n > 2 && n%2!=0){
+        primo = 1;
+    }
+    else if(n == 2){
+        primo = 1;   
     }
     return primo;
-}
+} // ta errado
 
-main() {
-    float n;
+int main() {
+    int n;
     
     printf("Digite um numero: ");
-    scanf("%f", &n);
+    scanf("%d", &n);
 
-    if(ehPrimo){
+    if(ehPrimo(n)){
         printf("Esse numero eh primo");
     }
     else {
